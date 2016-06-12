@@ -1,0 +1,36 @@
+<div class="ui fluid card">
+            <div class="content">
+              <div class="header site-title"><%= config.title %></div>
+<% if (theme.subtitle) { %>
+              <div class="meta"><%= theme.subtitle %></div>
+<% } %>
+            </div>
+            <div class="content">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody>
+                  <tr>
+                    <td width="48" valign="middle" align="center"><a class="ui tiny rounded image site-avatar"><img src="<%- url_for(theme.avatar) %>"></a></td>
+                    <td width="5"></td>
+                    <td width="auto" valign="middle">
+                      <div class="header" style="font-size: 14px; font-weight: bold;"><%= config.author %></div>
+                      <div class="meta"><%= config.description %></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="ui mini statistics">
+                <a class="statistic" href="<%- url_for('/archives') %>">
+                  <div class="value"><%= site.posts.length %></div>
+                  <div class="label"><%= __('widget.status.posts') %></div>
+                </a>
+                <a class="statistic" href="<%- url_for('/planes') %>">
+                  <div class="value"><%= site.categories.length %></div>
+                  <div class="label"><%= __('widget.status.nodes') %></div>
+                </a>
+                <a class="statistic">
+                  <div class="value"><%= site.tags.length %></div>
+                  <div class="label"><%= __('widget.status.tags') %></div>
+                </a>
+              </div>
+            </div>
+          </div>

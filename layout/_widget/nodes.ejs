@@ -1,0 +1,8 @@
+<div class="ui fluid card">
+            <div class="content"><%= __('widget.nodes') %></div>
+            <div class="content">
+<% site.categories.limit(13).each(function(category){ %>
+              <a class="ui basic circular site-node label" href="<%- url_for(category.path) %>"><%= category.name %></a>
+<% }) %>
+            </div>
+          </div>

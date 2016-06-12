@@ -1,0 +1,8 @@
+<div class="ui link list">
+<% for (var i in theme.footer) { %>
+                <div class="item">
+                  <i class="angle right icon"></i>
+                  <div class="content"><a href="<%- url_for(theme.menu[i]) %>"><%= __('menu.' + i) %></a></div>
+                </div>
+<% } %>
+              </div>

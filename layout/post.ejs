@@ -1,0 +1,32 @@
+<div class="ui fluid card">
+            <div class="content">
+              <a class="ui tiny rounded image float right site-avatar"><img src="<%- url_for(theme.avatar) %>"></a>
+              <div class="ui breadcrumb">
+                <a class="section" href="<%- url_for() %>"><%= config.title %></a>
+                <i class="right angle icon divider"></i>
+                <%- list_categories(page.categories, {show_count: false, style: 'none', class: 'section node'}) %>
+              </div>
+              <h1 class="ui header post title"><%= page.title %></h1>
+              <div class="meta"><a><%= config.author %></a> &nbsp;·&nbsp; <%- full_date(page.date, 'YYYY-MM-DD HH:mm:ss') %></div>
+            </div>
+            <div class="post content">
+              <%- page.content %>
+            </div>
+            <div class="content" id="pc-only">
+               <a class="tiny ui button with small padding" href="<%- url_for() %>"><%= __('button.home') %></a>
+<% if (page.next) { %>
+               <a class="tiny ui button with small padding" href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>"><%= __('button.prev_post') %></a>
+<% } %>
+<% if (page.prev) { %>
+               <a class="tiny ui button with small padding" href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>"><%= __('button.next_post') %></a>
+<% } %>
+               <a class="tiny ui button with small padding" onclick="$('html, body').animate({scrollTop: 0}, 1000); return false;"><%= __('button.top') %></a>
+               <div class="ui circular labels inline float right">
+                 <%-
+                 list_tags(page.tags, {show_count: false, style: 'none', separator: '', class: 'ui label tag', transform: function(a) {
+                   return '<i class="tags icon"></i>' + a;
+                 }})
+                 %>
+               </div>
+             </div>
+           </div>

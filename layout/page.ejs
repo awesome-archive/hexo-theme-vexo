@@ -1,0 +1,18 @@
+<div class="ui fluid card">
+            <div class="content">
+              <div class="ui breadcrumb">
+                <a class="section" href="<%- url_for() %>"><%= config.title %></a>
+                <i class="right angle icon divider"></i>
+                <div class="active section"><%= page.title %></div>
+              </div>
+            </div>
+            <div class="post content">
+<% if (page.type === 'planes') { %>
+              <%- partial('_pages/planes') %>
+<% } else if (page.type === 'more') { %>
+              <%- partial('_pages/more') %>
+<% } else { %>
+              <%- page.content %>
+<% } %>
+            </div>
+          </div>

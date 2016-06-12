@@ -1,0 +1,16 @@
+<%- partial('_partial/head-meta') %>
+<body>
+  <div class="ui vertical segment site-main">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div class="ui content container">
+      <div class="ui grid">
+        <div class="sixteen wide mobile twelve wide tablet twelve wide computer column">
+          <%- body %>
+        </div>
+        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+      </div>
+    </div>
+  </div>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+</body>
+</html>

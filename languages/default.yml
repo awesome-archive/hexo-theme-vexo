@@ -1,0 +1,23 @@
+title.archive: Archives
+
+archive.count: "%d posts"
+
+node.lists: Nodes
+
+menu.index: Index
+menu.node: Nodes
+menu.more: More
+
+button.home: Back to home
+button.prev_post: Previous post
+button.next_post: Next post
+button.top: Back to top
+
+widget.recent_posts: Recent Posts
+widget.nodes: Nodes
+widget.status: Blog Status
+widget.status.posts: Posts
+widget.status.nodes: Nodes
+widget.status.tags: Tags
+
+footer.about: About

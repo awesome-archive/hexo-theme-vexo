@@ -1,0 +1,23 @@
+title.archive: 所有文章
+
+archive.count: "共 %d 篇文章"
+
+node.lists: 所有节点
+
+menu.index: 首页
+menu.node: 节点
+menu.more: 更多
+
+button.home: 返回首页
+button.prev_post: 上一篇文章
+button.next_post: 下一篇文章
+button.top: 返回顶部
+
+widget.recent_posts: 最新文章
+widget.nodes: 节点
+widget.status: 站点状态
+widget.status.posts: 文章
+widget.status.nodes: 节点
+widget.status.tags: 标签
+
+footer.about: 关于

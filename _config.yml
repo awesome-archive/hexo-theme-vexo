@@ -1,0 +1,37 @@
+# Site logo
+#logo: /images/logo.png
+
+# Display search bar on header
+# When you using our search bar, please learn how to visit google from China
+# Note: the search bar will not displayed when using mobile devices
+# Default: true
+search: true
+
+# Author avatar
+avatar: /images/avatar.png
+
+# Header Menu Items
+menu:
+  node: /planes
+
+# Header Menu Icons (For Mobile Devices)
+# Icon keyword can be found here: http://semantic-ui.com/elements/icon.html
+menu_icons:
+  node: cubes
+
+# Footer Menu Items
+# Note: these items will displayed in special page when using mobile devices
+#footer:
+#  example: /example
+
+# Footer note text
+# Note: support HTML syntax text, this text will not displayed when using mobile devices
+#footer_note: "没有什么事情比折腾还要愉快了。"
+
+# Node (category) Icons
+#node_avatars:
+#  <Category name>: <Image path>
+
+# Node (category) Descriptions
+#node_descs:
+#  <Category name>: <Description>

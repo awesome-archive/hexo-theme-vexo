@@ -1,0 +1,26 @@
+<footer class="ui vertical footer segment" id="pc-only">
+    <div class="ui content container">
+<% if (theme.footer_float_img) { %>
+      <img class="ui tiny image float right" src="<%- url_for(theme.footer_float_img) %>">
+<% } %>
+      <div class="ui horizontal bulleted link list">
+        <a class="item" href="<%- url_for('/about') %>"><%= __('footer.about') %></a>
+<% for (var i in theme.footer) { %>
+        <a class="item" href="<%- url_for(theme.menu[i]) %>"><%= __('footer.' + i) %></a>
+<% } %>
+      </div>
+<% if (theme.footer_note) { %>
+      <div style="padding-top: 1em;"><%- theme.footer_note %></div>
+<% } %>
+      <div style="padding-top: 1em;">
+        © <%= date(Date.now(), "YYYY") %>&nbsp; <i class="ui heart icon"></i> <%= config.author %><br>
+        Powered by <a href="https://hexo.io/">Hexo</a> &nbsp;·&nbsp; Theme inspire by <a href="https://www.v2ex.com/">V2EX</a>
+      </div>
+    </div>
+  </footer>
+  <footer class="ui vertical footer segment" id="mobile-only">
+    <div class="ui content container">
+      © <%= date(Date.now(), "YYYY") %>&nbsp; <i class="ui heart icon"></i> <%= config.author %> &nbsp;·&nbsp; <a href="https://hexo.io/">Hexo powered</a>
+      <a class="float right" href="<%- url_for('/about') %>"><%= __('footer.about') %></a>
+    </div>
+  </footer>

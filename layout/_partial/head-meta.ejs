@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- css('semantic.min.css') %>
+  <%- css('style.css') %>
+  <%- css('highlight/highlight.css') %>
+  <%- js('jquery-2.2.4.min.js') %>
+  <%- js('semantic.min.js') %>
+<% if (theme.search) { %>
+  <%- js('searchbar.js') %>
+<% } %>
+  <%
+  var title = config.title;
+
+  if (is_archive()) {
+    title = config.title + ' › ' + __('title.archive');
+  } else if (is_category()) {
+    title = config.title + ' › ' + page.category;
+  } else if (is_tag()) {
+    title = config.title + ' › ' + page.tag;
+  } else if (is_post()) {
+    title = page.title + ' - ' + config.title;
+  } else if (page.title) {
+    title = config.title + ' › ' + page.title;
+  }
+  %>
+  <title><% if (title) { %><%= title %><% } else { %><%= config.title %><% } %></title>
+</head>
