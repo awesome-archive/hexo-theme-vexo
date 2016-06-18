@@ -13,6 +13,10 @@ button.prev_post: 上一篇文章
 button.next_post: 下一篇文章
 button.top: 返回顶部
 
+comments.title: 评论
+comments.powered: "由 <a href=\"https://disqus.com/\">Disqus</a> 提供"
+comments.noscript: 为了成功地阅读评论，我们建议您启用 Javascript
+
 widget.recent_posts: 最新文章
 widget.nodes: 节点
 widget.status: 站点状态

@@ -13,6 +13,10 @@ button.prev_post: Previous post
 button.next_post: Next post
 button.top: Back to top
 
+comments.title: Comments
+comments.powered: "Powered by <a href=\"https://disqus.com/\">Disqus</a>"
+comments.noscript: Please enable JavaScript to view the comments.
+
 widget.recent_posts: Recent Posts
 widget.nodes: Nodes
 widget.status: Blog Status

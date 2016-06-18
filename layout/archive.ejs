@@ -15,23 +15,7 @@
               </div>
             </div>
 <% page.posts.each(function(post){ %>
-            <div class="content post-list-item">
-              <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                <tbody>
-                  <tr>
-                    <td width="35" valign="top" align="center"><a class="ui tiny rounded image site-avatar"><img src="<%- url_for(theme.avatar) %>"></a></td>
-                    <td width="10"></td>
-                    <td width="auto" valign="middle">
-                      <a style="font-size: 14px;" href="<%- url_for(post.path) %>"><%= post.title %></a><br>
-                      <span style="margin-top: 5px;">
-                        <%- list_categories(post.categories, {show_count: false, style: 'none', class: 'ui label node'}) %> &nbsp;•&nbsp; 
-                        <b><a><%= config.author %></a></b> &nbsp;•&nbsp; <%- full_date(post.date, 'YYYY-MM-DD HH:mm:ss') %>
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <%- partial('_partial/post-item', {post: post, inCategory: false, inIndex: false}) %>
 <% }) %>
             <div class="content">
               <div class="meta inline paginator"><%- paginator({prev_next: false}) %></div>

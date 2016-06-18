@@ -20,7 +20,7 @@
 <% if (page.prev) { %>
                <a class="tiny ui button with small padding" href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>"><%= __('button.next_post') %></a>
 <% } %>
-               <a class="tiny ui button with small padding" onclick="$('html, body').animate({scrollTop: 0}, 1000); return false;"><%= __('button.top') %></a>
+               <a class="tiny ui button with small padding" href="#" onclick="$('html, body').animate({scrollTop: 0}, 1000); return false;"><%= __('button.top') %></a>
                <div class="ui circular labels inline float right">
                  <%-
                  list_tags(page.tags, {show_count: false, style: 'none', separator: '', class: 'ui label tag', transform: function(a) {
@@ -30,3 +30,14 @@
                </div>
              </div>
            </div>
+<% if (config.disqus_shortname && page.comments) { %>
+           <div class="ui fluid card" id="comment">
+             <div class="content">
+               <div class="meta inline"><%= __('comments.title') %></div>
+               <div class="meta inline float right"><%- __('comments.powered') %></div>
+             </div>
+             <div class="content">
+               <%- partial('_partial/comment') %>
+             </div>
+           </div>
+<% } %>

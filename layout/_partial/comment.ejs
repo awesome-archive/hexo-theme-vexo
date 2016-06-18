@@ -1,0 +1,18 @@
+<% if (config.disqus_shortname) { %>
+  <div id="disqus_thread">
+    <noscript><%= __('comments.noscript') %></noscript>
+  </div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = '<%= page.permalink %>';
+      this.page.identifier = '<%= page.path %>';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//<%= config.disqus_shortname %>.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<% } %>
