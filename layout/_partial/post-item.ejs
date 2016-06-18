@@ -11,7 +11,7 @@
                       <span style="margin-top: 5px;">
 <% if (!inCategory) { %>
 <% post.categories.limit(1).each(function(category) { %>
-                        <a class="ui label node-link" href="<%- url_for(category.path) %>"><%= category.name %></a><% } %> &nbsp;•&nbsp; 
+                        <a class="ui label node-link" href="<%- url_for(category.path) %>"><%= category.name %></a><% }) %> &nbsp;•&nbsp; 
 <% } %>
                         <b><a><%= config.author %></a></b> &nbsp;•&nbsp; <%- full_date(post.date, 'YYYY-MM-DD HH:mm:ss') %>
                       </span>
