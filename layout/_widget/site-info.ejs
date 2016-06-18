@@ -19,7 +19,7 @@
                 </tbody>
               </table>
               <div class="ui mini statistics">
-                <a class="statistic" href="<%- url_for('/archives') %>">
+                <a class="statistic" href="<%- url_for(config.archive_dir) %>">
                   <div class="value"><%= site.posts.length %></div>
                   <div class="label"><%= __('widget.status.posts') %></div>
                 </a>
@@ -27,7 +27,7 @@
                   <div class="value"><%= site.categories.length %></div>
                   <div class="label"><%= __('widget.status.nodes') %></div>
                 </a>
-                <a class="statistic">
+                <a class="statistic" href="<%- url_for('/tags') %>">
                   <div class="value"><%= site.tags.length %></div>
                   <div class="label"><%= __('widget.status.tags') %></div>
                 </a>

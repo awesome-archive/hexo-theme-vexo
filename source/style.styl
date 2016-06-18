@@ -17,6 +17,7 @@ float(a)
 // Header
 .site-header
   border-radius: 0 !important
+  box-shadow: 0 1px 12px 0 rgba(34, 36, 38, .24) !important
 
 .ui.menu
   .item
@@ -72,6 +73,10 @@ float(a)
   .label.node-link
     font-weight: normal
     padding: 5px
+
+  .label.disqus-comment-count
+    padding: 2px 10px !important
+    min-height: inherit
 
 h1.post.title
   margin-top: 15px !important
@@ -152,10 +157,10 @@ h1.post.title
     height: auto
     padding-right: 10px
 
-  // Node label
-  &.label
-    font-weight: normal
-    margin-bottom: 3px
+// Label
+.site-node.label, .site-tag.label
+  font-weight: normal
+  margin-bottom: 3px
 
 // Font size
 normal-size = 12px

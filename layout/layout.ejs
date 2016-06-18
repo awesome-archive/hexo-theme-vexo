@@ -15,16 +15,13 @@
 <% if (config.disqus_shortname) { %>
   <script id="dsq-count-scr" src="//<%= config.disqus_shortname %>.disqus.com/count.js" async></script>
   <script>
-    // FIXME
-    (function() {
-      var dcc = $('.disqus-comment-count');
-      dcc.bind('DOMNodeInserted', function(a) {
-        var b = $(this).text().replace(/[^0-9]/ig, '');
-        if (b < 1) {$(this).remove();}
-        $(this).text(b);
-        DISQUSWIDGETS.getCount({reset: true});
-      });
-    })();
+    var dcc = $('.disqus-comment-count');
+    dcc.one('DOMNodeInserted', function(a) {
+      var b = $(this).text().replace(/[^0-9]/ig, '');
+      if (b !== '' && b < 1) {$(this).remove(); return;}
+      $(this).text(b);
+      $(this).addClass('ui blue circular label');
+    });
   </script>
 <% } %>
 </body>

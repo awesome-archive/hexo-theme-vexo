@@ -10,13 +10,14 @@
                       <a style="font-size: 14px;" href="<%- url_for(post.path) %>"><%= post.title %></a><br>
                       <span style="margin-top: 5px;">
 <% if (!inCategory) { %>
-                        <%- list_categories(post.categories, {show_count: false, style: 'none', class: 'ui label node'}) %> &nbsp;•&nbsp; 
+<% post.categories.limit(1).each(function(category) { %>
+                        <a class="ui label node-link" href="<%- url_for(category.path) %>"><%= category.name %></a><% } %> &nbsp;•&nbsp; 
 <% } %>
                         <b><a><%= config.author %></a></b> &nbsp;•&nbsp; <%- full_date(post.date, 'YYYY-MM-DD HH:mm:ss') %>
                       </span>
                     </td>
                     <td width="70" valign="middle" align="right">
-                      <a class="ui blue circular label disqus-comment-count" href="<%- url_for(post.path) %>#disqus_thread"></a>
+                      <a href="<%- url_for(post.path) %>#comment"><span class="disqus-comment-count" data-disqus-identifier="<%= post.path %>"></span></a>
                     </td>
                   </tr>
                 </tbody>

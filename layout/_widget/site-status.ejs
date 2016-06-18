@@ -23,4 +23,7 @@
                 </tbody>
               </table>
             </div>
+<% if (theme.rss) { %>
+            <div class="content"><a href="<%- url_for(theme.rss) %>"><i class="circular inverted orange feed icon"></i> RSS</a></div>
+<% } %>
           </div>

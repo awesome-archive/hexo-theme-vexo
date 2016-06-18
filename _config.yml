@@ -10,6 +10,9 @@ search: true
 # Author avatar
 avatar: /images/avatar.png
 
+# RSS Feed link
+#rss: atom.xml
+
 # Header Menu Items
 menu:
   node: /planes

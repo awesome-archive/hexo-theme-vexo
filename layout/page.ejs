@@ -9,6 +9,8 @@
             <div class="post content">
 <% if (page.type === 'planes') { %>
               <%- partial('_pages/planes') %>
+<% } else if (page.type === 'tags') { %>
+              <%- partial('_pages/tags') %>
 <% } else if (page.type === 'more') { %>
               <%- partial('_pages/more') %>
 <% } else { %>
