@@ -28,4 +28,6 @@ widget.status.posts: 文章
 widget.status.nodes: 节点
 widget.status.tags: 标签
 
+widget.toc: 目录
+
 footer.about: 关于

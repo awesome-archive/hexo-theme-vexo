@@ -28,4 +28,6 @@ widget.status.posts: Posts
 widget.status.nodes: Nodes
 widget.status.tags: Tags
 
+widget.toc: Table of contents
+
 footer.about: About
