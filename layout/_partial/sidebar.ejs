@@ -1,11 +1,9 @@
 <div class="four wide column" id="pc-only">
           <%- partial('_widget/site-info') %>
-<% if (!is_post() && !is_page()) { %>
-          <%- partial('_widget/recent-posts') %>
-          <%- partial('_widget/nodes') %>
-          <%- partial('_widget/site-status') %>
-<% } %>
 <% if (page.toc) { %>
           <%- partial('_widget/toc') %>
 <% } %>
+          <%- partial('_widget/recent-posts') %>
+          <%- partial('_widget/nodes') %>
+          <%- partial('_widget/site-status') %>
         </div>
