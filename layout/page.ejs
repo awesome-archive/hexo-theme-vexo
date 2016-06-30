@@ -1,4 +1,4 @@
-<div class="ui fluid card">
+<% if (page.type === 'about-me') { %><%- partial('_pages/about-me') %><% } else { %><div class="ui fluid card">
             <div class="content">
               <div class="ui breadcrumb">
                 <a class="section" href="<%- url_for() %>"><%= config.title %></a>
@@ -17,4 +17,4 @@
               <%- page.content %>
 <% } %>
             </div>
-          </div>
+          </div><% } %>

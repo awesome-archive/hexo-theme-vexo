@@ -38,3 +38,13 @@ menu_icons:
 # Node (category) Descriptions
 #node_descs:
 #  <Category name>: <Description>
+
+# Author's social informations
+#author:
+#  github: <GitHub Username>
+#  gitlab_com: <GitLab.com Username, not custom GitLab server>
+#  bitbucket: <Bitbucket Username>
+#  steam: <Steam Username>
+#  v2ex: <V2EX Username>
+#  twitter: <Twitter Username>
+#  reddit: <Reddit Username>

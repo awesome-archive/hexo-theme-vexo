@@ -1,0 +1,29 @@
+<div class="ui fluid card">
+            <div class="content">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody>
+                  <tr>
+                    <td width="73" valign="top" align="center"><img class="ui rounded image" src="<%- url_for(theme.avatar) %>"></td>
+                    <td width="10"></td>
+                    <td width="auto" valign="top" align="left">
+                      <h1 class="ui header" style="font-size: 24px; font-weight: 500; margin: 0px 0px 5px 0px;"><%= config.author %></h1>
+                      <span style="font-size: 14px;"><%= config.description %></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content">
+              <a class="ui olive circular large social label" href="<%- url_for() %>"><i class="large home icon"></i> <%= config.url %></a>
+              <% if (theme.author.github) { %><a class="ui black circular large social label" href="https://github.com/<%= theme.author.github %>"><i class="large github icon"></i> <%= theme.author.github %></a><% } %>
+              <% if (theme.author.gitlab_com) { %><a class="ui orange circular large social label" href="https://gitlab.com/u/<%= theme.author.gitlab_com %>"><i class="large gitlab icon"></i> <%= theme.author.gitlab_com %></a><% } %>
+              <% if (theme.author.bitbucket) { %><a class="ui blue circular large social label" href="https://bitbucket.org/<%= theme.author.bitbucket %>/"><i class="large bitbucket icon"></i> <%= theme.author.bitbucket %></a><% } %>
+              <% if (theme.author.steam) { %><a class="ui black circular large social label" href="http://steamcommunity.com/id/<%= theme.author.steam %>"><i class="large steam icon"></i> <%= theme.author.steam %></a><% } %>
+              <% if (theme.author.v2ex) { %><a class="ui grey circular large social label" href="https://www.v2ex.com/member/<%= theme.author.v2ex %>"><img class="icon" src="https://www.v2ex.com/static/img/icon_rayps_64.png"> <%= theme.author.v2ex %></a><% } %>
+              <% if (theme.author.twitter) { %><a class="ui blue circular large social label" href="https://twitter.com/<%= theme.author.twitter %>"><i class="large twitter icon"></i> <%= theme.author.twitter %></a><% } %>
+              <% if (theme.author.reddit) { %><a class="ui red circular large social label" href="https://www.reddit.com/user/<%= theme.author.reddit %>"><i class="large reddit alien icon"></i> <%= theme.author.reddit %></a><% } %>
+            </div>
+            <div class="content">
+              <%- page.content %>
+            </div>
+          </div>
