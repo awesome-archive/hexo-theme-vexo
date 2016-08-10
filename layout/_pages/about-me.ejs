@@ -22,6 +22,7 @@
               <% if (theme.author.v2ex) { %><a class="ui grey circular large social label" href="https://www.v2ex.com/member/<%= theme.author.v2ex %>"><img class="icon" src="https://www.v2ex.com/static/img/icon_rayps_64.png"> <%= theme.author.v2ex %></a><% } %>
               <% if (theme.author.twitter) { %><a class="ui blue circular large social label" href="https://twitter.com/<%= theme.author.twitter %>"><i class="large twitter icon"></i> <%= theme.author.twitter %></a><% } %>
               <% if (theme.author.reddit) { %><a class="ui red circular large social label" href="https://www.reddit.com/user/<%= theme.author.reddit %>"><i class="large reddit alien icon"></i> <%= theme.author.reddit %></a><% } %>
+              <% if (theme.author.bilibili) { %><a class="ui blue circular large social label" href="http://space.bilibili.com/<%= theme.author.bilibili %>"><img class="icon" src="<%- url_for('/images/bilibili_icon.png') %>"> <%= theme.author.bilibili %></a><% } %>
             </div>
             <div class="content">
               <%- page.content %>

@@ -3,6 +3,16 @@
 <% if (page.toc) { %>
           <%- partial('_widget/toc') %>
 <% } %>
+<% if (page.categories) { %>
+<% page.categories.limit(1).each(function(category) { %>
+<% if (theme.node_sidebar && theme.node_sidebar[category.name]) { %>
+          <%- partial('_widget/node/' + category.name + '.ejs') %>
+<% } %>
+<% }) %>
+<% } %>
+<% if (page.category && theme.node_sidebar && theme.node_sidebar[page.category]) { %>
+          <%- partial('_widget/node/' + page.category + '.ejs') %>
+<% } %>
           <%- partial('_widget/recent-posts') %>
           <%- partial('_widget/nodes') %>
           <%- partial('_widget/site-status') %>

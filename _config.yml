@@ -39,6 +39,11 @@ menu_icons:
 #node_descs:
 #  <Category name>: <Description>
 
+# Node (category) Sidebar Widget Switch
+# Widget temple file is storaged to {theme folder}/layout/_widget/node/{node name}.ejs
+#node_sidebar:
+#  <Category name>: true
+
 # Author's social informations
 #author:
 #  github: <GitHub Username>
@@ -48,3 +53,4 @@ menu_icons:
 #  v2ex: <V2EX Username>
 #  twitter: <Twitter Username>
 #  reddit: <Reddit Username>
+#  bilibili: <Bilibili user id, not username>
