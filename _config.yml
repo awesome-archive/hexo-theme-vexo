@@ -13,6 +13,14 @@ avatar: /images/avatar.png
 # RSS Feed link
 #rss: atom.xml
 
+# Google Chrome for Mobile Theme Color
+# Value is color hex, without '#' prefix
+#theme_color: FFFFFF
+
+# Favicon
+# Must be PNG image
+#favicon: /images/favicon.png
+
 # Header Menu Items
 menu:
   node: /planes

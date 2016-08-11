@@ -11,6 +11,8 @@
 <% if (theme.search) { %>
   <%- js('searchbar.js') %>
 <% } %>
+  <% if (theme.theme_color) { %><meta name="theme-color" content="#<%= theme.theme_color %>"><% } %>
+  <% if (theme.favicon) { %><link href="<%- url_for(theme.favicon) %>" rel="icon" type="image/png"><% } %>
   <%
   var title = config.title;
 
